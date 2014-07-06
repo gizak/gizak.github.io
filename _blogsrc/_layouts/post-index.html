@@ -21,7 +21,7 @@
     {% elsif page.image.feature contains 'https://' %}
       "{{ page.image.feature }}"
     {% else %}
-      "{{ site.url }}/images/{{ page.image.feature }}"
+      "{{ site.url }}{{site.baseurl}}/images/{{ page.image.feature }}"
     {% endif %}
   alt="{{ page.title }} feature image">
   {% if page.image.credit %}
@@ -36,7 +36,7 @@
 
 <div id="index">
   <h1>{{ page.title }}</h1>
-  {% for post in site.posts %}  
+  {% for post in site.posts %}
   {% unless post.next %}
     <h3>{{ post.date | date: '%Y' }}</h3>
     {% else %}
@@ -48,9 +48,9 @@
     {% endunless %}
     <article>
       {% if post.link %}
-        <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="icon-link"></i></h2>
+        <h2 class="link-post"><a href="{{ site.url }}{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="icon-link"></i></h2>
       {% else %}
-        <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+        <h2><a href="{{ site.url }}{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
         <p>{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}</p>
       {% endif %}
     </article>
@@ -64,6 +64,6 @@
 </div><!-- /.footer-wrap -->
 
 {% include _scripts.html %}
-  
+
 </body>
 </html>

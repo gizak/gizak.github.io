@@ -5,24 +5,24 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Site Title</title>
-<meta name="description" content="A responsive Jekyll theme with editorial tendencies by designer Michael Rose.">
-<meta name="keywords" content="Jekyll, theme, responsive, blog, template">
+<title>Sample Link Post &#8211; Site Title</title>
+<meta name="description" content="Example and code for using link posts.">
+<meta name="keywords" content="sample post, link post">
 
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Site Title">
-<meta property="og:description" content="A responsive Jekyll theme with editorial tendencies by designer Michael Rose.">
-<meta property="og:url" content="http://gizak.github.io/blog/index.html">
+<meta property="og:title" content="Sample Link Post">
+<meta property="og:description" content="Example and code for using link posts.">
+<meta property="og:url" content="http://gizak.github.io/blog/sample-link-post/">
 <meta property="og:site_name" content="Site Title">
 
 
 
 
 
-<link rel="canonical" href="http://gizak.github.io/blog/">
+<link rel="canonical" href="http://gizak.github.io/blog/sample-link-post/">
 <link href="http://gizak.github.io/blog/feed.xml" type="application/atom+xml" rel="alternate" title="Site Title Feed">
 
 
@@ -63,7 +63,7 @@
 
 </head>
 
-<body class="home">
+<body class="post">
 
 <!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
 
@@ -90,20 +90,10 @@
 
 
 
-  <div class="image-wrap">
-  <img src=
-    
-      "http://gizak.github.io/blog/images/texture-feature-01.jpg"
-    
-  alt=" feature image">
-  
-    <span class="image-credit">Photo Credit: <a href="http://texturelovers.com">Texture Lovers</a></span>
-  
-  </div><!-- /.image-wrap -->
 
-
-<div class="article-author-side">
-  
+<div id="main" role="main">
+  <div class="article-author-side">
+    
 	<img src="http://gizak.github.io/blog/images/bio-photo.jpg" class="bio-photo" alt="Your Name bio photo"></a>
 
 <h3>Your Name</h3>
@@ -122,48 +112,66 @@
 
 
 
-</div>
+  </div>
+  <article>
+    <div class="headline-wrap">
+      
+        <h1><a href="http://mademistakes.com">Sample Link Post</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>This theme supports <strong>link posts</strong>, made famous by John Gruber. To use, just add <code>link: http://url-you-want-linked</code> to the post’s YAML front matter and you’re done.</p>
 
-<div id="index">
-  <h3><a href="http://gizak.github.io/blog/posts/">Recent Posts</a></h3>
+<blockquote>
+  <p>And this is how a quote looks.</p>
+</blockquote>
+
+<p>Some <a href="http://www.mademistakes.com">link</a> can also be shown.</p>
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          
+	<img src="http://gizak.github.io/blog/images/bio-photo.jpg" class="bio-photo" alt="Your Name bio photo"></a>
+
+<h3>Your Name</h3>
+<p>Describe your self.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <p class="byline"><strong>Sample Link Post</strong> was published on <time datetime="2013-08-12T00:00:00-04:00">August 12, 2013</time> by <a href="http://gizak.github.io/about" title="About Your Name">Your Name</a>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
   
-  <article>
-    
-      <h2><a href="http://gizak.github.io/blog/code-highlighting-post/" title="Syntax Highlighting Post">Syntax Highlighting Post</a></h2>
-      <p>Demo post displaying the various ways of highlighting code in Markdown.</p>
-    
   </article>
-  
-  <article>
-    
-      <h2 class="link-post"><a href="http://gizak.github.io/blog/sample-link-post/" title="Sample Link Post">Sample Link Post</a> <a href="http://mademistakes.com" target="_blank" title="Sample Link Post"><i class="icon-link"></i></h2>
-    
-  </article>
-  
-  <article>
-    
-      <h2><a href="http://gizak.github.io/blog/readability-feature-post/" title="Post with Large Feature Image and Text">Post with Large Feature Image and Text</a></h2>
-      <p>Custom written post descriptions are the way to go... if you're not lazy.</p>
-    
-  </article>
-  
-  <article>
-    
-      <h2><a href="http://gizak.github.io/blog/sample-post-images/" title="A Post with Images">A Post with Images</a></h2>
-      <p>Examples and code for displaying images in posts.</p>
-    
-  </article>
-  
-  <article>
-    
-      <h2><a href="http://gizak.github.io/blog/readability-post/" title="Testing Readability with a Bunch of Text">Testing Readability with a Bunch of Text</a></h2>
-      <p>A ton of text to test readability.</p>
-    
-  </article>
-  
-</div><!-- /#index -->
+</div><!-- /#main -->
 
 <div class="footer-wrap">
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://gizak.github.io/posts/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://gizak.github.io/code-highlighting-post/" title="Syntax Highlighting Post">Syntax Highlighting Post</a></li>
+    
+      <li><a href="http://gizak.github.io/readability-feature-post/" title="Post with Large Feature Image and Text">Post with Large Feature Image and Text</a></li>
+    
+      <li><a href="http://gizak.github.io/sample-post-images/" title="A Post with Images">A Post with Images</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
   <footer>
     <span>&copy; 2014 Your Name. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
 
@@ -175,7 +183,7 @@
 <script src="http://gizak.github.io/blog/assets/js/scripts.min.js"></script>
 
 
-
+	        
 
 </body>
 </html>

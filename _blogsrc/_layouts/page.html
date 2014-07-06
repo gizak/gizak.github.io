@@ -21,7 +21,7 @@
     {% elsif page.image.feature contains 'https://' %}
       "{{ page.image.feature }}"
     {% else %}
-      "{{ site.url }}/images/{{ page.image.feature }}"
+      "{{ site.url }}{{site.baseurl}}/images/{{ page.image.feature }}"
     {% endif %}
   alt="{{ page.title }} feature image">
   {% if page.image.credit %}
@@ -51,7 +51,7 @@
   </footer>
 </div><!-- /.footer-wrap -->
 
-{% include _scripts.html %}          
+{% include _scripts.html %}
 
 </body>
 </html>
