@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-<title type="text">Site Title</title>
+<title type="text">Clogure</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://gizak.github.io/feed.xml" />
-<link rel="alternate" type="text/html" href="http://gizak.github.io" />
-<updated>2014-07-06T12:04:06-04:00</updated>
-<id>http://gizak.github.io/</id>
+<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
+<link rel="alternate" type="text/html" href="http://localhost:4000" />
+<updated>2014-07-07T13:05:46-04:00</updated>
+<id>http://localhost:4000/</id>
 <author>
-  <name>Your Name</name>
-  <uri>http://gizak.github.io/</uri>
-  <email>your@email.com</email>
+  <name>Zack</name>
+  <uri>http://localhost:4000/</uri>
+  <email>gizak@icloud.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[Syntax Highlighting Post]]></title>
-  <link rel="alternate" type="text/html" href="http://gizak.github.io/code-highlighting-post/" />
-  <id>http://gizak.github.io/code-highlighting-post</id>
-  <published>2013-08-16T00:00:00-04:00</published>
-  <updated>2013-08-16T00:00:00-04:00</updated>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/2013-08-16-code-highlighting-post/" />
+  <id>http://localhost:4000/2013-08-16-code-highlighting-post</id>
+  <published>2014-07-04T22:58:33-04:00</published>
+  <updated>2014-07-04T22:58:33-04:00</updated>
   <author>
-    <name>Your Name</name>
-    <uri>http://gizak.github.io</uri>
-    <email>your@email.com</email>
+    <name>Zack</name>
+    <uri>http://localhost:4000</uri>
+    <email>gizak@icloud.com</email>
   </author>
   <content type="html">&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Syntax_highlighting&quot;&gt;Syntax highlighting&lt;/a&gt; is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.&lt;/p&gt;
 
@@ -124,20 +124,20 @@ end
 &lt;script src=&quot;https://gist.github.com/mmistakes/6589546.js&quot;&gt; &lt;/script&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://gizak.github.io/code-highlighting-post/&quot;&gt;Syntax Highlighting Post&lt;/a&gt; was originally published by Your Name at &lt;a href=&quot;http://gizak.github.io&quot;&gt;Site Title&lt;/a&gt; on August 16, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2013-08-16-code-highlighting-post/&quot;&gt;Syntax Highlighting Post&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 04, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Sample Link Post]]></title>
-  <link rel="alternate" type="text/html" href="http://gizak.github.io/sample-link-post/" />
-  <id>http://gizak.github.io/sample-link-post</id>
-  <published>2013-08-12T00:00:00-04:00</published>
-  <updated>2013-08-12T00:00:00-04:00</updated>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/2013-08-12-sample-link-post/" />
+  <id>http://localhost:4000/2013-08-12-sample-link-post</id>
+  <published>2014-07-04T22:58:33-04:00</published>
+  <updated>2014-07-04T22:58:33-04:00</updated>
   <author>
-    <name>Your Name</name>
-    <uri>http://gizak.github.io</uri>
-    <email>your@email.com</email>
+    <name>Zack</name>
+    <uri>http://localhost:4000</uri>
+    <email>gizak@icloud.com</email>
   </author>
   <content type="html">&lt;p&gt;This theme supports &lt;strong&gt;link posts&lt;/strong&gt;, made famous by John Gruber. To use, just add &lt;code&gt;link: http://url-you-want-linked&lt;/code&gt; to the post’s YAML front matter and you’re done.&lt;/p&gt;
 
@@ -147,20 +147,20 @@ end
 
 &lt;p&gt;Some &lt;a href=&quot;http://www.mademistakes.com&quot;&gt;link&lt;/a&gt; can also be shown.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://gizak.github.io/sample-link-post/&quot;&gt;Sample Link Post&lt;/a&gt; was originally published by Your Name at &lt;a href=&quot;http://gizak.github.io&quot;&gt;Site Title&lt;/a&gt; on August 12, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2013-08-12-sample-link-post/&quot;&gt;Sample Link Post&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 04, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Post with Large Feature Image and Text]]></title>
-  <link rel="alternate" type="text/html" href="http://gizak.github.io/readability-feature-post/" />
-  <id>http://gizak.github.io/readability-feature-post</id>
-  <published>2013-05-23T00:00:00-04:00</published>
-  <updated>2013-05-23T00:00:00-04:00</updated>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/2013-05-23-readability-feature-post/" />
+  <id>http://localhost:4000/2013-05-23-readability-feature-post</id>
+  <published>2014-07-04T22:58:33-04:00</published>
+  <updated>2014-07-04T22:58:33-04:00</updated>
   <author>
-    <name>Your Name</name>
-    <uri>http://gizak.github.io</uri>
-    <email>your@email.com</email>
+    <name>Zack</name>
+    <uri>http://localhost:4000</uri>
+    <email>gizak@icloud.com</email>
   </author>
   <content type="html">&lt;p&gt;This is a sample post with a large feature image&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; up top and tons of text. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
 
@@ -211,20 +211,20 @@ end
   &lt;/ol&gt;
 &lt;/div&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://gizak.github.io/readability-feature-post/&quot;&gt;Post with Large Feature Image and Text&lt;/a&gt; was originally published by Your Name at &lt;a href=&quot;http://gizak.github.io&quot;&gt;Site Title&lt;/a&gt; on May 23, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2013-05-23-readability-feature-post/&quot;&gt;Post with Large Feature Image and Text&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 04, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[A Post with Images]]></title>
-  <link rel="alternate" type="text/html" href="http://gizak.github.io/sample-post-images/" />
-  <id>http://gizak.github.io/sample-post-images</id>
-  <published>2013-05-22T00:00:00-04:00</published>
-  <updated>2013-05-22T00:00:00-04:00</updated>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/2013-05-22-sample-post-images/" />
+  <id>http://localhost:4000/2013-05-22-sample-post-images</id>
+  <published>2014-07-04T22:58:33-04:00</published>
+  <updated>2014-07-04T22:58:33-04:00</updated>
   <author>
-    <name>Your Name</name>
-    <uri>http://gizak.github.io</uri>
-    <email>your@email.com</email>
+    <name>Zack</name>
+    <uri>http://localhost:4000</uri>
+    <email>gizak@icloud.com</email>
   </author>
   <content type="html">&lt;p&gt;Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use &lt;code&gt;figure&lt;/code&gt; with the appropriate &lt;code&gt;class&lt;/code&gt;. Each instance of &lt;code&gt;figure&lt;/code&gt; is auto-numbered and displayed in the caption.&lt;/p&gt;
 
@@ -277,20 +277,20 @@ end
 	&lt;figcaption&gt;Three images.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://gizak.github.io/sample-post-images/&quot;&gt;A Post with Images&lt;/a&gt; was originally published by Your Name at &lt;a href=&quot;http://gizak.github.io&quot;&gt;Site Title&lt;/a&gt; on May 22, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2013-05-22-sample-post-images/&quot;&gt;A Post with Images&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 04, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Testing Readability with a Bunch of Text]]></title>
-  <link rel="alternate" type="text/html" href="http://gizak.github.io/readability-post/" />
-  <id>http://gizak.github.io/readability-post</id>
-  <published>2012-05-22T00:00:00-04:00</published>
-  <updated>2012-05-22T00:00:00-04:00</updated>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/2012-05-22-readability-post/" />
+  <id>http://localhost:4000/2012-05-22-readability-post</id>
+  <published>2014-07-04T22:58:33-04:00</published>
+  <updated>2014-07-04T22:58:33-04:00</updated>
   <author>
-    <name>Your Name</name>
-    <uri>http://gizak.github.io</uri>
-    <email>your@email.com</email>
+    <name>Zack</name>
+    <uri>http://localhost:4000</uri>
+    <email>gizak@icloud.com</email>
   </author>
   <content type="html">&lt;p&gt;Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
 
@@ -333,21 +333,21 @@ end
 
 &lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://gizak.github.io/readability-post/&quot;&gt;Testing Readability with a Bunch of Text&lt;/a&gt; was originally published by Your Name at &lt;a href=&quot;http://gizak.github.io&quot;&gt;Site Title&lt;/a&gt; on May 22, 2012.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2012-05-22-readability-post/&quot;&gt;Testing Readability with a Bunch of Text&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 04, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Sample Post]]></title>
-  <link rel="alternate" type="text/html" href="http://gizak.github.io/sample-post/" />
-  <id>http://gizak.github.io/sample-post</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/2011-03-10-sample-post/" />
+  <id>http://localhost:4000/2011-03-10-sample-post</id>
   <updated>2013-05-31T00:00:00-00:00</updated>
-  <published>2011-03-10T00:00:00-05:00</published>
+  <published>2014-07-04T22:58:33-04:00</published>
   
   <author>
-    <name>Your Name</name>
-    <uri>http://gizak.github.io</uri>
-    <email>your@email.com</email>
+    <name>Zack</name>
+    <uri>http://localhost:4000</uri>
+    <email>gizak@icloud.com</email>
   </author>
   <content type="html">&lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
   &lt;header&gt;
@@ -409,7 +409,7 @@ end
 
 &lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
 
-&lt;p class=&quot;image-pull-right&quot;&gt;&lt;img src=&quot;http://gizak.github.io/images/3953273590_704e3899d5_m.jpg&quot; alt=&quot;Smithsonian Image&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;image-pull-right&quot;&gt;&lt;img src=&quot;http://localhost:4000/images/3953273590_704e3899d5_m.jpg&quot; alt=&quot;Smithsonian Image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This is emphasized&lt;/em&gt;. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H2O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times (That’s a citation). Underline.Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.&lt;/p&gt;
 
@@ -511,7 +511,7 @@ end
 
 &lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;Watch out!&lt;/strong&gt; You can also add notices by appending &lt;code&gt;{: .notice}&lt;/code&gt; to a paragraph.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://gizak.github.io/sample-post/&quot;&gt;Sample Post&lt;/a&gt; was originally published by Your Name at &lt;a href=&quot;http://gizak.github.io&quot;&gt;Site Title&lt;/a&gt; on March 10, 2011.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2011-03-10-sample-post/&quot;&gt;Sample Post&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 04, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
