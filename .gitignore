@@ -1,1 +1,3 @@
-_blogsrc/_site
+src
+test
+.DS_Store
