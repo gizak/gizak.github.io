@@ -14,8 +14,24 @@
   :cljsbuild {
     :builds [{:id "test"
               :source-paths ["src/indexp"]
-              :compiler {
-                :output-to "test/cljs/indexp.js"
-                :output-dir "test/cljs"
-                :optimizations :none
-                :source-map true}}]})
+              :compiler {:output-to "test/cljs/indexp.js"
+                         :output-dir "test/cljs"
+                         :optimizations :none
+                         :source-map true}}
+             {:id "prod"
+              :source-paths ["src/indexp"]
+              :compiler {:output-to "js/build.js"
+                         :optimizations :advanced
+                         ;; :foreign-libs [{:file "http://code.jquery.com/jquery-1.10.2.min.js"
+                         ;;                 :provides ["$" "jQuery"]}
+                         ;;                {:file "js/react-0.10.0.min.js"
+                         ;;                 :provides ["React"]}
+                         ;;                {:file "js/jquery.vegas.min.js"
+                         ;;                 :provides ["$.vegas" "jQuery.vegas"]}
+                         ;;                {:file "js/sm/script/soundmanager2-nodebug-jsmin.js"
+                         ;;                 :provides ["soundManager"]}]
+                         :externs ["js/jquery-1.10.2.min.js"
+                                   "js/react-0.10.0.min.js"
+                                   "js/jquery.vegas.min.js"
+                                   "js/sm/script/soundmanager2-nodebug-jsmin.js"]
+                         :pretty-print false}}]})

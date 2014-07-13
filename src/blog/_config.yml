@@ -1,7 +1,7 @@
 title:            Clogure
 description:      I just hate morning people, or mornings, or people...
 # Your site's domain goes here. Leave localhost server or blank when working locally.
-url: http://localhost:4000
+url: http://gizak.github.io
 baseurl: /blog
 disqus_shortname:
 

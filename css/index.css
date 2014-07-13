@@ -117,3 +117,14 @@ nav a:focus {
     -moz-transform: rotate(0deg) translateX(50%);
     transform: rotate(0deg) translateX(50%);
 }
+
+#add-on {
+	position:fixed;
+	right:20px;
+	top:8px;
+	color:white;
+}
+
+.player i {
+	margin-right:7px;
+}
