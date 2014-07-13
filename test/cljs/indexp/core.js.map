@@ -1,0 +1,7 @@
+{"version":3,
+ "file":
+ "/Users/Gizak/Documents/gizak.github.io/test/cljs/indexp/core.js",
+ "sources":["core.cljs"],
+ "lineCount":11,
+ "mappings":";AAAA;;;;;;AAIA,AAACA;AAED,0BAAA,1BAACC",
+ "names":["cljs.core/enable-console-print!", "cljs.core/print"]}
