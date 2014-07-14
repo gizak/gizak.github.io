@@ -10,7 +10,7 @@ body {
     font-family: 'Raleway', sans-serif;
     }
 
-.container headmsg {
+.container header {
     color: #fff;
 }
 .container a {
@@ -118,7 +118,7 @@ nav a:focus {
     transform: rotate(0deg) translateX(50%);
 }
 
-#add-on {
+.player {
 	position:fixed;
 	right:20px;
 	top:8px;
