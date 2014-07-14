@@ -8,8 +8,8 @@
 (enable-console-print!)
 
 
-(def app-state (atom {:slide [{:src "/img/sky2.jpg" :fade 700}
-                              {:src "/img/sky1.jpg" :fade 700}]
+(def app-state (atom {:slide [{:src "/img/sky2.jpg" :fade 700 :tag "Mountain view" :text ""}
+                              {:src "/img/sky1.jpg" :fade 700 :tag "Sunset glow" :text ""}]
                       :audio [{:url "http://freshly-ground.com/data/audio/sm2/Adrian Glynn - Seven Or Eight Days.mp3"
                                :id "Seven Or Eight Days - Adrian Glynn"
                                :ref "#"}]
@@ -47,7 +47,7 @@
       {:icon-css ""})
     om/IWillMount
     (will-mount [_]
-      (go (<! (timeout 1000)) (play-current-track app))
+      (go (<! (timeout 800)) (play-current-track app))
       (go (loop []
             (let [css (get state-icon-css (keyword (:state @app)))]
               (om/set-state! owner :icon-css css)
@@ -70,10 +70,29 @@
                       (dom/span nil (:id (current-track))))))))
 
 
+(defn headmsg [app owner]
+  (reify om/IRender
+    (render [this]
+      (dom/div #js {:id "container" :className "container"}
+               (dom/section nil
+                            (dom/header nil
+                                         (dom/h1 nil "Engineer")
+                                         (dom/h2 nil "Univ of Ottawa, born in China, since 1991"))
+                            (dom/div #js {:className "in-slide-content"}
+                                     (dom/nav #js {:className "cl-effect-14" :id "cl-effect-14"}
+                                              (dom/a #js {:href "http://about.me/zackguo"} "About.Me")
+                                              (dom/a #js {:href "/blog/"} "Blog")
+                                              (dom/a #js {:href "https://github.com/gizak"} "GitHub")
+                                              (dom/a #js {:href "http://gizak-tsuite.appspot.com"} "Appspot"))))))))
+
 
 (om/root
- player-view
- app-state {:target (.getElementById js/document "add-on")})
+ (fn [app owner] (reify om/IRender
+                   (render [_]
+                     (dom/div #js {:className "content"}
+                              (om/build player-view app)
+                              (om/build headmsg app)))))
+ app-state {:target (.getElementById js/document "app")})
 
 
 (js/$ (fn [] (.vegas js/$ "slideshow" (clj->js {:delay 4500

@@ -22,13 +22,13 @@
               :source-paths ["src/indexp"]
               :compiler {:output-to "build/js/build.js"
                          :optimizations :advanced
-                         ;; :foreign-libs [{:file "http://code.jquery.com/jquery-1.10.2.min.js"
+                         ;; :foreign-libs [{:file "test/js/jquery-1.10.2.min.js"
                          ;;                 :provides ["$" "jQuery"]}
-                         ;;                {:file "js/react-0.10.0.min.js"
+                         ;;                {:file "test/js/react-0.10.0.min.js"
                          ;;                 :provides ["React"]}
-                         ;;                {:file "js/jquery.vegas.min.js"
+                         ;;                {:file "test/js/jquery.vegas.min.js"
                          ;;                 :provides ["$.vegas" "jQuery.vegas"]}
-                         ;;                {:file "js/sm/script/soundmanager2-nodebug-jsmin.js"
+                         ;;                {:file "test/js/sm/script/soundmanager2-nodebug-jsmin.js"
                          ;;                 :provides ["soundManager"]}]
                          :externs ["build/js/jquery-1.10.2.min.js"
                                    "build/js/react-0.10.0.min.js"
