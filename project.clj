@@ -20,7 +20,7 @@
                          :source-map true}}
              {:id "prod"
               :source-paths ["src/indexp"]
-              :compiler {:output-to "js/build.js"
+              :compiler {:output-to "build/js/build.js"
                          :optimizations :advanced
                          ;; :foreign-libs [{:file "http://code.jquery.com/jquery-1.10.2.min.js"
                          ;;                 :provides ["$" "jQuery"]}
@@ -30,8 +30,8 @@
                          ;;                 :provides ["$.vegas" "jQuery.vegas"]}
                          ;;                {:file "js/sm/script/soundmanager2-nodebug-jsmin.js"
                          ;;                 :provides ["soundManager"]}]
-                         :externs ["js/jquery-1.10.2.min.js"
-                                   "js/react-0.10.0.min.js"
-                                   "js/jquery.vegas.min.js"
-                                   "js/sm/script/soundmanager2-nodebug-jsmin.js"]
+                         :externs ["build/js/jquery-1.10.2.min.js"
+                                   "build/js/react-0.10.0.min.js"
+                                   "build/js/jquery.vegas.min.js"
+                                   "build/js/sm/script/soundmanager2-nodebug-jsmin.js"]
                          :pretty-print false}}]})

@@ -1,9 +1,9 @@
 build:
 	perl -pi -e 's/^url:.*/url: http:\/\/gizak.github.io/' src/blog/_config.yml
-	cd src/blog && jekyll build --destination ../../blog
+	cd src/blog && jekyll build --destination ../../build/blog
 	lein cljsbuild clean prod
 	lein cljsbuild once prod >/dev/null 2>&1
-	python -m SimpleHTTPServer 4000
+	cd build && python -m SimpleHTTPServer 4000
 
 serve:
 	lein cljsbuild auto test &
@@ -15,3 +15,5 @@ install:
 	git add --all
 	git commit -m "Auto update"
 	git push
+
+.PHONY: build

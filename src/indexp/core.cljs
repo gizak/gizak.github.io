@@ -47,6 +47,7 @@
       {:icon-css ""})
     om/IWillMount
     (will-mount [_]
+      (go (<! (timeout 1000)) (play-current-track app))
       (go (loop []
             (let [css (get state-icon-css (keyword (:state @app)))]
               (om/set-state! owner :icon-css css)
@@ -80,4 +81,5 @@
 
 
 (.setup js/soundManager #js {:url "/js/sm/swf/"
-                             :onready (fn [] (swap! app-state assoc :state "idle"))})
+                             :onready (fn []
+                                        (swap! app-state assoc :state "idle"))})
