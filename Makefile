@@ -3,6 +3,9 @@ build:
 	cd src/blog && jekyll build --destination ../../build/blog
 	lein cljsbuild clean prod
 	lein cljsbuild once prod 2>/dev/null
+	mv build/js/build.js build/js/_build.js
+	cd build/js && cat jquery-1.10.2.min.js jquery.vegas.min.js react-0.10.0.min.js sm/script/soundmanager2.js _build.js > build.js
+	rm build/js/_build.js
 	cd build && python -m SimpleHTTPServer 4000
 
 serve:
