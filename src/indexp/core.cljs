@@ -87,7 +87,8 @@
                                                                                                    (.log js/console (:cursor @app))
                                                                                                    (play-current-track app))}))
                                                   (om/set-state! owner :ready true)
-                                                  (go (<! (timeout 300)) (play-current-track app)))}))
+                                        ;(go (<! (timeout 300)) (play-current-track app))
+                                                  )}))
       (go (loop []
             (<! (timeout 300))
             ;; (case (.-playState  (.getSoundById js/soundManager (:id (current-track))))
