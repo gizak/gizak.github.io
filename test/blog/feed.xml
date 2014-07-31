@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-07-25T14:28:23-04:00</updated>
+<updated>2014-07-31T16:57:53-04:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Zack</name>
@@ -17,8 +17,8 @@
   <title type="html"><![CDATA[Syntax Highlighting Post]]></title>
   <link rel="alternate" type="text/html" href="http://localhost:4000/2013-08-16-code-highlighting-post/" />
   <id>http://localhost:4000/2013-08-16-code-highlighting-post</id>
-  <published>2014-07-25T14:27:24-04:00</published>
-  <updated>2014-07-25T14:27:24-04:00</updated>
+  <published>2014-07-28T12:14:17-04:00</published>
+  <updated>2014-07-28T12:14:17-04:00</updated>
   <author>
     <name>Zack</name>
     <uri>http://localhost:4000</uri>
@@ -124,7 +124,7 @@ end
 &lt;script src=&quot;https://gist.github.com/mmistakes/6589546.js&quot;&gt; &lt;/script&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2013-08-16-code-highlighting-post/&quot;&gt;Syntax Highlighting Post&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 25, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2013-08-16-code-highlighting-post/&quot;&gt;Syntax Highlighting Post&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 28, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -132,8 +132,8 @@ end
   <title type="html"><![CDATA[Sample Link Post]]></title>
   <link rel="alternate" type="text/html" href="http://localhost:4000/2013-08-12-sample-link-post/" />
   <id>http://localhost:4000/2013-08-12-sample-link-post</id>
-  <published>2014-07-25T14:27:24-04:00</published>
-  <updated>2014-07-25T14:27:24-04:00</updated>
+  <published>2014-07-28T12:14:17-04:00</published>
+  <updated>2014-07-28T12:14:17-04:00</updated>
   <author>
     <name>Zack</name>
     <uri>http://localhost:4000</uri>
@@ -147,7 +147,7 @@ end
 
 &lt;p&gt;Some &lt;a href=&quot;http://www.mademistakes.com&quot;&gt;link&lt;/a&gt; can also be shown.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2013-08-12-sample-link-post/&quot;&gt;Sample Link Post&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 25, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2013-08-12-sample-link-post/&quot;&gt;Sample Link Post&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 28, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -155,8 +155,8 @@ end
   <title type="html"><![CDATA[Post with Large Feature Image and Text]]></title>
   <link rel="alternate" type="text/html" href="http://localhost:4000/2013-05-23-readability-feature-post/" />
   <id>http://localhost:4000/2013-05-23-readability-feature-post</id>
-  <published>2014-07-25T14:27:24-04:00</published>
-  <updated>2014-07-25T14:27:24-04:00</updated>
+  <published>2014-07-28T12:14:17-04:00</published>
+  <updated>2014-07-28T12:14:17-04:00</updated>
   <author>
     <name>Zack</name>
     <uri>http://localhost:4000</uri>
@@ -211,7 +211,7 @@ end
   &lt;/ol&gt;
 &lt;/div&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2013-05-23-readability-feature-post/&quot;&gt;Post with Large Feature Image and Text&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 25, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2013-05-23-readability-feature-post/&quot;&gt;Post with Large Feature Image and Text&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 28, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -219,8 +219,8 @@ end
   <title type="html"><![CDATA[A Post with Images]]></title>
   <link rel="alternate" type="text/html" href="http://localhost:4000/2013-05-22-sample-post-images/" />
   <id>http://localhost:4000/2013-05-22-sample-post-images</id>
-  <published>2014-07-25T14:27:24-04:00</published>
-  <updated>2014-07-25T14:27:24-04:00</updated>
+  <published>2014-07-28T12:14:17-04:00</published>
+  <updated>2014-07-28T12:14:17-04:00</updated>
   <author>
     <name>Zack</name>
     <uri>http://localhost:4000</uri>
@@ -277,7 +277,7 @@ end
 	&lt;figcaption&gt;Three images.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2013-05-22-sample-post-images/&quot;&gt;A Post with Images&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 25, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2013-05-22-sample-post-images/&quot;&gt;A Post with Images&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 28, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -285,8 +285,8 @@ end
   <title type="html"><![CDATA[Testing Readability with a Bunch of Text]]></title>
   <link rel="alternate" type="text/html" href="http://localhost:4000/2012-05-22-readability-post/" />
   <id>http://localhost:4000/2012-05-22-readability-post</id>
-  <published>2014-07-25T14:27:24-04:00</published>
-  <updated>2014-07-25T14:27:24-04:00</updated>
+  <published>2014-07-28T12:14:17-04:00</published>
+  <updated>2014-07-28T12:14:17-04:00</updated>
   <author>
     <name>Zack</name>
     <uri>http://localhost:4000</uri>
@@ -333,7 +333,7 @@ end
 
 &lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2012-05-22-readability-post/&quot;&gt;Testing Readability with a Bunch of Text&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 25, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2012-05-22-readability-post/&quot;&gt;Testing Readability with a Bunch of Text&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 28, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -342,7 +342,7 @@ end
   <link rel="alternate" type="text/html" href="http://localhost:4000/2011-03-10-sample-post/" />
   <id>http://localhost:4000/2011-03-10-sample-post</id>
   <updated>2013-05-31T00:00:00-00:00</updated>
-  <published>2014-07-25T14:27:24-04:00</published>
+  <published>2014-07-28T12:14:17-04:00</published>
   
   <author>
     <name>Zack</name>
@@ -511,7 +511,7 @@ end
 
 &lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;Watch out!&lt;/strong&gt; You can also add notices by appending &lt;code&gt;{: .notice}&lt;/code&gt; to a paragraph.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2011-03-10-sample-post/&quot;&gt;Sample Post&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 25, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2011-03-10-sample-post/&quot;&gt;Sample Post&lt;/a&gt; was originally published by Zack at &lt;a href=&quot;http://localhost:4000&quot;&gt;Clogure&lt;/a&gt; on July 28, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>

@@ -8,27 +8,20 @@
 (enable-console-print!)
 
 
-(def app-state (atom {:slide [{:src "/img/background/sky2.jpg" :fade 700 :tag "" :text ""}
-                              ;{:src "/img/background/2013-07-08 19.37.54.jpg" :fade 700 :tag "Hometown, Daqing" :text ""}
-                              ;{:src "/img/background/IMG_0069.JPG" :fade 700 :tag "Wonderland, Toronto" :text ""}
-                              ;{:src "/img/background/IMG_0079.JPG" :fade 700 :tag "Ottawa Canal" :text ""}
-                              ;{:src "/img/background/IMG_0086.JPG" :fade 700 :tag "Just where I live" :text ""}
-                              ;{:src "/img/background/IMG_0091.JPG" :fade 700 :tag "Night in Morriset library" :text ""}
-                              ;{:src "/img/background/IMG_0093.JPG" :fade 700 :tag "Working (coding...)" :text ""}
-                              ;{:src "/img/background/wallpaper-1056567.jpg" :fade 700 :tag "" :text ""}
-                              ;{:src "/img/background/wallpaper-783333.jpg" :fade 700 :tag "" :text ""}
-                              ;{:src "/img/background/wallpaper-253958.jpg" :fade 700 :tag "" :text ""}
-                              ;{:src "/img/background/IMG_0099.JPG" :fade 700 :tag "Highway to Toronto" :text ""}
+(def app-state (atom {:slide [{:src "/img/solid/Solid Aqua Blue.png" :fade 800 :tag "" :text ""}
+                              {:src "/img/background/sky2.jpg" :fade 700 :tag "" :text ""}
+                              {:src "/img/background/Ducks on a Misty Pond.jpg" :fade 700 :tag "Ducks on a Misty Pond" :text ""}
                               {:src "/img/background/wallpaper-1660505.jpg" :fade 700 :tag "" :text ""}
+                              {:src "/img/background/Sky.jpg" :fade 700 :tag "Sky" :text ""}
                               {:src "/img/background/wallpaper-2822770.jpg" :fade 700 :tag "" :text ""}
+                              {:src "/img/background/Lake.jpg" :fade 700 :tag "Lake" :text ""}
+                              {:src "/img/background/Beach.jpg" :fade 700 :tag "Beach" :text ""}
                               {:src "/img/background/IMG_0275.JPG" :fade 700 :tag "On Campus" :text ""}
+                              {:src "/img/background/Bahamas Aerial.jpg" :fade 700 :tag "On Campus" :text ""}
+                              {:src "/img/background/Isles.jpg" :fade 700 :tag "Isles" :text ""}
                               {:src "/img/background/wallpaper-185258.jpg" :fade 700 :tag "" :text ""}
-                              ;{:src "/img/background/IMG_0102.JPG" :fade 700 :tag "Niagara Falls" :text ""}
-                              ;{:src "/img/background/IMG_0198.JPG" :fade 700 :tag "Parliament Hill" :text ""}
-                              ;{:src "/img/background/wallpaper-335020.jpg" :fade 700 :tag "" :text ""}
-                              ;{:src "/img/background/wallpaper-2467722.jpg" :fade 700 :tag "" :text ""}
-                              ;{:src "/img/background/wallpaper-1305577.jpg" :fade 700 :tag "" :text ""}
-                              ;{:src "/img/background/IMG_0387.JPG" :fade 700 :tag "Children's Day, Nanjing Deji Plaza" :text ""}
+                              {:src "/img/background/Mt. Fuji.jpg" :fade 700 :tag "Mt. Fuji" :text ""}
+                              {:src "/img/background/Milky Way.jpg" :fade 700 :tag "Milky Way" :text ""}
                               {:src "/img/background/sky1.jpg" :fade 700 :tag "" :text ""}]
                       :audio [{:url "http://freshly-ground.com/data/audio/sm2/Adrian Glynn - Seven Or Eight Days.mp3"
                                :id "Seven Or Eight Days - Adrian Glynn"
@@ -70,25 +63,28 @@
        :ready false})
     om/IWillMount
     (will-mount [_]
-      (go (.setup js/soundManager #js {:url "/js/sm/swf/"
-                                       :onready (fn []
-                                                  (swap! app-state assoc :state "idle")
-                                                  (doseq [{:keys [id url]} (:audio @app)]
-                                                    (.createSound js/soundManager #js {:url url :id id :autoLoad true
-                                                                                       :onplay (fn [] (change-state app "playing")
-                                                                                                 (go
-                                                                                                   (om/set-state! owner :player-css "animated pulse")
-                                                                                                   (<! (timeout 2500))
-                                                                                                   (om/set-state! owner :player-css "animated fadeOut")))
-                                                                                       :onpause (fn [] (change-state app "paused"))
-                                                                                       :onfinish (fn []
-                                                                                                   (change-state app "idle")
-                                                                                                   (om/transact! app :cursor #(mod (+ 1 (:cursor @app)) (count (:audio @app))))
-                                                                                                   (.log js/console (:cursor @app))
-                                                                                                   (play-current-track app))}))
-                                                  (om/set-state! owner :ready true)
+      (go (.setup js/soundManager
+                  #js {:url "/js/sm/swf/"
+                       :onready (fn []
+                                  (swap! app-state assoc :state "idle")
+                                  (doseq [{:keys [id url]} (:audio @app)]
+                                    (.createSound js/soundManager
+                                                  #js {:url url :id id :autoLoad true
+                                                       :onplay (fn [] (change-state app "playing")
+                                                                 (go
+                                                                   (om/set-state! owner :player-css "animated pulse")
+                                                                   (<! (timeout 2500))
+                                                                   (om/set-state! owner :player-css "animated fadeOut")))
+                                                       :onpause (fn [] (change-state app "paused"))
+                                                       :onfinish (fn []
+                                                                   (change-state app "idle")
+                                                                   (om/transact! app :cursor #(mod (+ 1 (:cursor @app)) (count (:audio @app))))
+                                                                   (.log js/console (:cursor @app))
+                                                                   (play-current-track app))}))
+                                  (om/set-state! owner :ready true)
+                                  (om/set-state! owner :player-css "animated fadeOut")
                                         ;(go (<! (timeout 300)) (play-current-track app))
-                                                  )}))
+                                  )}))
       (go (loop []
             (<! (timeout 300))
             ;; (case (.-playState  (.getSoundById js/soundManager (:id (current-track))))
