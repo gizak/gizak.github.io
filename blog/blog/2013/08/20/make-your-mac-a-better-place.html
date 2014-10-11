@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zack Guo - Make Mac OS X a Better Place for Emacsers and Others</title>
+  <meta name="author" content="Zack Guo" />
+  <meta name="description" content="The blog of Zack Guo" />
+  <link rel="canonical" href="http://gizak.github.io/blog/blog/2013/08/20/make-your-mac-a-better-place.html" />
+
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="alternate" type="application/rss+xml" title="Zack Guo" href="http://gizak.github.io/blog/atom.xml" />
+
+  <link rel="stylesheet" href="/blog/assets/css/all.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="ten columns offset-by-three content">
+	  <p class="meta">
+		August 20, 2013
+		<a href="/blog">
+		  <i class="home fa fa-home"></i>
+		</a>
+	  </p>
+
+	  <h1 class="title">Make Mac OS X a Better Place for Emacsers and Others</h1>
+
+	  <div id="post">
+		<p><em>This is a “LTS” list of suggested tools(developer-leaning) runing on OS X based on my personal experiences, you can consider it as a starter tool kit for new machines and systems.</em></p>
+
+<h3 id="basic-principles">Basic Principles</h3>
+
+<ol>
+  <li><em>Less is more.</em> Consider the OS X’s builtin functionalities at first!</li>
+  <li>A good package manager saves your ass.</li>
+  <li>CLI is better than GUI from time to time.</li>
+</ol>
+
+<h3 id="starting-off">Starting Off</h3>
+
+<ol>
+  <li>Install <strong>Xcode Command Line Tools</strong>: <code>xcode-select --install</code>.
+Acutally install the Xcode GUI program is unnecessary if you are not a iOS or OSX developer since all other dev tools depend on Command Line Tools, not the Xcode GUI IDE.</li>
+  <li>Install <strong>brew</strong>: <a href="http://brew.sh">brew.sh</a> (the most popular OS X packages manager). Then <code>brew doctor</code>.</li>
+</ol>
+
+<h3 id="emacs">Emacs</h3>
+<p>Install <em>pure Emacs</em> from <a href="http://emacsformacosx.com">emacsformacosx.com</a>. This is so far the best version running on osx comparing with others(e.g. Aquamacs). The goodies of using pure Emacs is let you take full control of everything and have the best compatibility.</p>
+
+<p>Here is my <a href="https://gist.github.com/gizak/272ab7a66f74e0315eea">dotEmacs</a>!</p>
+
+<p><strong>Package for Packages</strong></p>
+
+<p><em>First of all, add melpa repo to Emacs</em>:</p>
+
+<div class="highlight"><pre><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;package</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;package-archives</span>
+  <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;melpa&quot;</span> <span class="o">.</span> <span class="s">&quot;http://melpa.milkbox.net/packages/&quot;</span><span class="p">)</span> <span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">package-initialize</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;load-path</span> <span class="s">&quot;~/.emacs.d/site-lisp&quot;</span><span class="p">)</span>    <span class="c1">; This may not be appeared if you have already added.</span></code></pre></div>
+
+<p><strong>Basic Packages</strong></p>
+
+<ol>
+  <li>auto-complete</li>
+  <li>base16-theme</li>
+  <li>ecb</li>
+  <li>flycheck</li>
+  <li>magit</li>
+  <li>rainbow-delimiters</li>
+  <li>yasnippet</li>
+  <li>ido</li>
+  <li>smex</li>
+  <li>volatile-highlight-mode</li>
+  <li>markdown-mode</li>
+  <li>yaml-mode</li>
+  <li>color-theme</li>
+</ol>
+
+<p><strong>Javascript Packages</strong></p>
+
+<ol>
+  <li>js3-mode</li>
+  <li>json-mode</li>
+</ol>
+
+<p><strong>Go Packages</strong></p>
+
+<ol>
+  <li>go-autocomplete</li>
+  <li>go-mode</li>
+  <li>go-lint</li>
+  <li>go-eldoc</li>
+  <li>go-direx (optinal)</li>
+  <li>go-errcheck(optional)</li>
+</ol>
+
+<p>Needed Go packages:</p>
+
+<ol>
+  <li><a href="https://github.com/nsf/gocode">gocode</a> (go-autocomplete, go-eldoc)</li>
+  <li><a href="https://github.com/golang/lint">lint</a> (go-lint)</li>
+  <li><a href="https://github.com/kisielk/errcheck">errcheck</a> (go-errcheck)</li>
+  <li><a href="https://github.com/jstemmer/gotags">gotags</a>  (go-direx)</li>
+</ol>
+
+<p><strong>Clojure and ClojureScript</strong></p>
+
+<ol>
+  <li>clojure-mode</li>
+  <li>cider</li>
+  <li>pretty-symbols</li>
+  <li>ac-nrepl</li>
+  <li>paredit</li>
+</ol>
+
+<p><strong>Others</strong></p>
+
+<ol>
+  <li>ess (R programming)</li>
+  <li>auctex (writing Tex)</li>
+  <li>linum-relative (kinda cool)</li>
+  <li>2048-game</li>
+  <li>git-gutter, git-gutter-fringe, fringe-helper</li>
+</ol>
+
+<p><strong>Dict and Spelling Checker</strong></p>
+
+<p>To work with flyspell-mode in Emacs I recommend using <em>hunspell</em> (which is the default checker in OS X) to replace default ispell:</p>
+
+<div class="highlight"><pre><code class="language-elisp" data-lang="elisp"><span class="c1">;; now hunspell replaced ispell</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">ispell-program-name</span> <span class="s">&quot;hunspell&quot;</span>
+      <span class="nv">ispell-local-dictionary</span> <span class="s">&quot;en_CA&quot;</span>
+      <span class="nv">ispell-skip-html</span> <span class="no">t</span>
+      <span class="nv">ispell-local-dictionary-alist</span>
+      <span class="o">&#39;</span><span class="p">((</span><span class="s">&quot;en_CA&quot;</span> <span class="s">&quot;\[\[:alpha:\]\]&quot;</span> <span class="s">&quot;[^[:alpha:]]&quot;</span> <span class="s">&quot;[&#39;]&quot;</span> <span class="no">nil</span> <span class="p">(</span><span class="s">&quot;-d&quot;</span> <span class="s">&quot;en_CA&quot;</span><span class="p">)</span> <span class="no">nil</span> <span class="nv">utf-8</span><span class="p">)))</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">ispell-dictionary</span> <span class="s">&quot;en_CA&quot;</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;markdown-mode-hook</span> <span class="ss">&#39;flyspell-mode</span><span class="p">)</span> <span class="c1">;; for markdown-mode</span>
+<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;org-mode-hook</span> <span class="ss">&#39;flyspell-mode</span><span class="p">)</span> <span class="c1">;; for org-mode</span></code></pre></div>
+
+<p>Download hunspell at <a href="http://hunspell.sourceforge.net">sourceforge</a></p>
+
+<p>Then download en dictionaries to /Library/Spelling :</p>
+
+<p>US:
+<a href="http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.aff">en_US.aff</a>
+<a href="http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.dic">en_US.dic</a></p>
+
+<p>CA:
+<a href="http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_CA.aff">en_CA.aff</a>
+<a href="http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_CA.dic">en_CA.dic</a></p>
+
+<h3 id="other-dev-tools">Other Dev Tools</h3>
+
+<p><a href="http://kapeli.com/dash">Dash.app</a>: Dash gives your Mac instant offline access to 150+ API documentation sets.</p>
+
+<p><a href="https://www.google.com/chrome/?">Google Chrome</a>: Sometimes Safari is not enough.</p>
+
+<p><a href="https://mac.github.com">Github for Mac</a>: Easiest way to use Github on Mac.</p>
+
+<p><a href="http://lighttable.com">Light Table</a>: A promising ClojureScript powered IDE, especially for Clojure, ClojureScript and Javascript developing.</p>
+
+<p><a href="https://slack.com">Slack</a>: Team communicating, a better way than emails.</p>
+
+<p><a href="http://www.visual-paradigm.com/download/community.jsp">Visual Paradiam CE</a>: Literally I do not like UML at all…</p>
+
+<h3 id="multimedia-and-others">Multimedia and Others</h3>
+
+<p><a href="http://mplayerx.org">MPlayerX</a>: The recent versions are off Apple App Store, so do not install it from App Store.</p>
+
+<p><a href="https://tug.org/mactex/">MacTex</a>: tex live on Mac.</p>
+
+<p><a href="https://www.apple.com/ca/mac/pages/">Pages.app</a>: Only recommend for quick dirty writing!</p>
+
+<p><a href="">Mail.app</a>: Every email app sucks, so let us just use the built-in app.</p>
+
+<p><a href="http://www.utorrent.com/?us">uTorrent</a>: The popular torrent client.</p>
+
+<p><a href="">Dictionary.app</a>: I don’t see any needs to install a third-party dictionary. If it’s not enough, go online!</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>Do not turn you Mac into a mess! Install things only when you need it! <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#103;&#105;&#122;&#097;&#107;&#064;&#105;&#099;&#108;&#111;&#117;&#100;&#046;&#099;&#111;&#109;">@Gizak</a></p>
+
+	  </div>
+
+	  <div id="related">
+		<h3>Related Posts</h3>
+		<ul class="posts">
+		  
+		</ul>
+	  </div>
+
+      <div class="footer">
+        <div class="disclaimer">
+  
+  <p>
+    The postings on this site are my own and don't necessarily represent my 
+    employer’s positions, strategies or opinions.
+  </p>
+  
+
+  <p>
+    © Zack Guo, 2014 &mdash; built with <a href="http://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/swanson/lagom">Lagom theme</a>
+  </p>
+</div>
+      </div>
+    </div>
+  </div>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-xxxx-x']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
