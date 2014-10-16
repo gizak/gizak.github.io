@@ -586,7 +586,7 @@ body {
   color: rgba(0,0,0,0.8);
   line-height: 24px;
   margin: 0;
-  border-top: 7px solid #006600;
+  border-top: 7px solid #588107;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -621,17 +621,17 @@ ul {
 }
 
 a {
-  color: #006600;
+  color: #588107;
   text-decoration: none;
 }
 
 a:hover {
-  color: #006600;
+  color: #588107;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #006600;
+  color: #588107;
 }
 
 table {
@@ -752,7 +752,7 @@ nav h1, nav h2 {
 }
 
 #home h2 {
-  color: #006600;
+  color: #588107;
 }
 
 #logo {
@@ -778,7 +778,7 @@ nav h1, nav h2 {
 
 #stalker a:hover {
   text-decoration: none;
-  color: #006600;
+  color: #588107;
 }
 
 i.fa-hn {
