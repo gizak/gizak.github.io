@@ -585,7 +585,6 @@ body {
   background-color: white;
   color: rgba(0,0,0,0.8);
   line-height: 1.6;
-  margin: 2px;
   font-family:"Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
   border-top: 7px solid #327C5B;
   -webkit-font-smoothing:subpixel-antialiased;
@@ -709,7 +708,7 @@ nav h1, nav h2 {
 
 #post li {
 	line-height:1.6;
-	margin-bottom:0px;
+	margin-bottom:1px;
 }
 
 #post code {
