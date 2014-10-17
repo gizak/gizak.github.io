@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-
+ 
  <title>The blog of Zack Guo</title>
  <link href="http://gizak.github.io/atom.xml" rel="self"/>
  <link href="http://gizak.github.io"/>
-<<<<<<< variant A
- <updated>2014-10-16T17:50:54-04:00</updated>
->>>>>>> variant B
- <updated>2014-10-16T20:41:14-04:00</updated>
-####### Ancestor
- <updated>2014-10-11T15:53:37-04:00</updated>
-======= end
+ <updated>2014-10-16T21:53:07-04:00</updated>
  <id>http://gizak.github.io</id>
  <author>
    <name>Zack Guo</name>
    <email>gizak@icloud.com</email>
  </author>
 
-
+ 
  <entry>
    <title>Make Mac OS X a Better Place for Emacsers and Others</title>
    <link href="http://gizak.github.io/blog/2013/08/20/make-your-mac-a-better-place.html"/>
@@ -181,6 +175,6 @@ Acutally install the Xcode GUI program is unnecessary if you are not a iOS or OS
 &lt;p&gt;Do not turn you Mac into a mess! Install things only when you need it! &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#103;&amp;#105;&amp;#122;&amp;#097;&amp;#107;&amp;#064;&amp;#105;&amp;#099;&amp;#108;&amp;#111;&amp;#117;&amp;#100;&amp;#046;&amp;#099;&amp;#111;&amp;#109;&quot;&gt;@Gizak&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
-
-
+ 
+ 
 </feed>
