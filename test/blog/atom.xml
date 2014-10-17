@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>The blog of Zack Guo</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000"/>
+ <updated>2014-10-16T21:51:24-04:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>Zack Guo</name>
+   <email>gizak@icloud.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Make Mac OS X a Better Place for Emacsers and Others</title>
+   <link href="http://localhost:4000/blog/2013/08/20/make-your-mac-a-better-place.html"/>
+   <updated>2013-08-20T00:00:00-04:00</updated>
+   <id>http://localhost:4000/blog/2013/08/20/make-your-mac-a-better-place</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;This is a “LTS” list of suggested tools(developer-leaning) runing on OS X based on my personal experiences, you can consider it as a starter tool kit for new machines and systems.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;basic-principles&quot;&gt;Basic Principles&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;Less is more.&lt;/em&gt; Consider the OS X’s builtin functionalities at first!&lt;/li&gt;
+  &lt;li&gt;A good package manager saves your ass.&lt;/li&gt;
+  &lt;li&gt;CLI is better than GUI from time to time.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;starting-off&quot;&gt;Starting Off&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Install &lt;strong&gt;Xcode Command Line Tools&lt;/strong&gt;: &lt;code&gt;xcode-select --install&lt;/code&gt;.
+Acutally install the Xcode GUI program is unnecessary if you are not a iOS or OSX developer since all other dev tools depend on Command Line Tools, not the Xcode GUI IDE.&lt;/li&gt;
+  &lt;li&gt;Install &lt;strong&gt;brew&lt;/strong&gt;: &lt;a href=&quot;http://brew.sh&quot;&gt;brew.sh&lt;/a&gt; (the most popular OS X packages manager). Then &lt;code&gt;brew doctor&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;emacs&quot;&gt;Emacs&lt;/h3&gt;
+&lt;p&gt;Install &lt;em&gt;pure Emacs&lt;/em&gt; from &lt;a href=&quot;http://emacsformacosx.com&quot;&gt;emacsformacosx.com&lt;/a&gt;. This is so far the best version running on osx comparing with others(e.g. Aquamacs). The goodies of using pure Emacs is let you take full control of everything and have the best compatibility.&lt;/p&gt;
+
+&lt;p&gt;Here is my &lt;a href=&quot;https://gist.github.com/gizak/272ab7a66f74e0315eea&quot;&gt;dotEmacs&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Package for Packages&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;First of all, add melpa repo to Emacs&lt;/em&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elisp&quot; data-lang=&quot;elisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;package&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;add-to-list&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;package-archives&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;melpa&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://melpa.milkbox.net/packages/&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;package-initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;add-to-list&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;load-path&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;~/.emacs.d/site-lisp&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;; This may not be appeared if you have already added.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Basic Packages&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;auto-complete&lt;/li&gt;
+  &lt;li&gt;base16-theme&lt;/li&gt;
+  &lt;li&gt;ecb&lt;/li&gt;
+  &lt;li&gt;flycheck&lt;/li&gt;
+  &lt;li&gt;magit&lt;/li&gt;
+  &lt;li&gt;rainbow-delimiters&lt;/li&gt;
+  &lt;li&gt;yasnippet&lt;/li&gt;
+  &lt;li&gt;ido&lt;/li&gt;
+  &lt;li&gt;smex&lt;/li&gt;
+  &lt;li&gt;volatile-highlight-mode&lt;/li&gt;
+  &lt;li&gt;markdown-mode&lt;/li&gt;
+  &lt;li&gt;yaml-mode&lt;/li&gt;
+  &lt;li&gt;color-theme&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Javascript Packages&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;js3-mode&lt;/li&gt;
+  &lt;li&gt;json-mode&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Go Packages&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;go-autocomplete&lt;/li&gt;
+  &lt;li&gt;go-mode&lt;/li&gt;
+  &lt;li&gt;go-lint&lt;/li&gt;
+  &lt;li&gt;go-eldoc&lt;/li&gt;
+  &lt;li&gt;go-direx (optinal)&lt;/li&gt;
+  &lt;li&gt;go-errcheck(optional)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Needed Go packages:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/nsf/gocode&quot;&gt;gocode&lt;/a&gt; (go-autocomplete, go-eldoc)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/golang/lint&quot;&gt;lint&lt;/a&gt; (go-lint)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/kisielk/errcheck&quot;&gt;errcheck&lt;/a&gt; (go-errcheck)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jstemmer/gotags&quot;&gt;gotags&lt;/a&gt;  (go-direx)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Clojure and ClojureScript&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;clojure-mode&lt;/li&gt;
+  &lt;li&gt;cider&lt;/li&gt;
+  &lt;li&gt;pretty-symbols&lt;/li&gt;
+  &lt;li&gt;ac-nrepl&lt;/li&gt;
+  &lt;li&gt;paredit&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Others&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;ess (R programming)&lt;/li&gt;
+  &lt;li&gt;auctex (writing Tex)&lt;/li&gt;
+  &lt;li&gt;linum-relative (kinda cool)&lt;/li&gt;
+  &lt;li&gt;2048-game&lt;/li&gt;
+  &lt;li&gt;git-gutter, git-gutter-fringe, fringe-helper&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Dict and Spelling Checker&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To work with flyspell-mode in Emacs I recommend using &lt;em&gt;hunspell&lt;/em&gt; (which is the default checker in OS X) to replace default ispell:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-elisp&quot; data-lang=&quot;elisp&quot;&gt;&lt;span class=&quot;c1&quot;&gt;;; now hunspell replaced ispell&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ispell-program-name&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;hunspell&amp;quot;&lt;/span&gt;
+      &lt;span class=&quot;nv&quot;&gt;ispell-local-dictionary&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;en_CA&amp;quot;&lt;/span&gt;
+      &lt;span class=&quot;nv&quot;&gt;ispell-skip-html&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;t&lt;/span&gt;
+      &lt;span class=&quot;nv&quot;&gt;ispell-local-dictionary-alist&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;en_CA&amp;quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;\[\[:alpha:\]\]&amp;quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;[^[:alpha:]]&amp;quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;[&amp;#39;]&amp;quot;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-d&amp;quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;en_CA&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;utf-8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ispell-dictionary&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;en_CA&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;markdown-mode-hook&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;flyspell-mode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;;; for markdown-mode&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;add-hook&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;org-mode-hook&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&amp;#39;flyspell-mode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;;; for org-mode&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Download hunspell at &lt;a href=&quot;http://hunspell.sourceforge.net&quot;&gt;sourceforge&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then download en dictionaries to /Library/Spelling :&lt;/p&gt;
+
+&lt;p&gt;US:
+&lt;a href=&quot;http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.aff&quot;&gt;en_US.aff&lt;/a&gt;
+&lt;a href=&quot;http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.dic&quot;&gt;en_US.dic&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;CA:
+&lt;a href=&quot;http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_CA.aff&quot;&gt;en_CA.aff&lt;/a&gt;
+&lt;a href=&quot;http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_CA.dic&quot;&gt;en_CA.dic&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;other-dev-tools&quot;&gt;Other Dev Tools&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kapeli.com/dash&quot;&gt;Dash.app&lt;/a&gt;: Dash gives your Mac instant offline access to 150+ API documentation sets.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.google.com/chrome/?&quot;&gt;Google Chrome&lt;/a&gt;: Sometimes Safari is not enough.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mac.github.com&quot;&gt;Github for Mac&lt;/a&gt;: Easiest way to use Github on Mac.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lighttable.com&quot;&gt;Light Table&lt;/a&gt;: A promising ClojureScript powered IDE, especially for Clojure, ClojureScript and Javascript developing.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://slack.com&quot;&gt;Slack&lt;/a&gt;: Team communicating, a better way than emails.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.visual-paradigm.com/download/community.jsp&quot;&gt;Visual Paradiam CE&lt;/a&gt;: Literally I do not like UML at all…&lt;/p&gt;
+
+&lt;h3 id=&quot;multimedia-and-others&quot;&gt;Multimedia and Others&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mplayerx.org&quot;&gt;MPlayerX&lt;/a&gt;: The recent versions are off Apple App Store, so do not install it from App Store.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tug.org/mactex/&quot;&gt;MacTex&lt;/a&gt;: tex live on Mac.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.apple.com/ca/mac/pages/&quot;&gt;Pages.app&lt;/a&gt;: Only recommend for quick dirty writing!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;Mail.app&lt;/a&gt;: Every email app sucks, so let us just use the built-in app.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.utorrent.com/?us&quot;&gt;uTorrent&lt;/a&gt;: The popular torrent client.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;Dictionary.app&lt;/a&gt;: I don’t see any needs to install a third-party dictionary. If it’s not enough, go online!&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;Do not turn you Mac into a mess! Install things only when you need it! &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#103;&amp;#105;&amp;#122;&amp;#097;&amp;#107;&amp;#064;&amp;#105;&amp;#099;&amp;#108;&amp;#111;&amp;#117;&amp;#100;&amp;#046;&amp;#099;&amp;#111;&amp;#109;&quot;&gt;@Gizak&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>
