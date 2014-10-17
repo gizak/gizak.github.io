@@ -1,6 +1,6 @@
 # General Jekyll Config
 highlighter: pygments
-url: http://localhost:4000
+url: http://gizak.github.io
 baseurl: /blog
 lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
