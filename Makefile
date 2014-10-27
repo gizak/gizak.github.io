@@ -19,6 +19,10 @@ blog:
 	cd src/blog && jekyll build --destination="../../test/blog" --drafts
 	cd test && python -m SimpleHTTPServer 4000
 
+build-blog:
+	perl -pi -e 's/^url:.*/url: http:\/\/gizak.github.io/' src/blog/_config.yml
+	cd src/blog && jekyll build --destination ../../build/blog
+
 install:
 	git add --all
 	git commit -m "Task Auto Update ->source"
