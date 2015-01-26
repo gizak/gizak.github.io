@@ -1,0 +1,278 @@
+<html lang="en">
+<head>
+
+  
+  <meta charset="utf-8">
+  <title>Emacser&#39;s guide: set up your osx like a BOSS</title>
+  <meta name="description" content="Emacser&#39;s guide: set up your osx like a BOSS">
+  <meta name="author" content="Zack Guo">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/normalize.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/skeleton.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+</head>
+<body>
+
+<header id="menu">
+  <div class="container">
+	<span class="logo">Clogure</span>
+	<a>&#9776;</a>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="container">
+	<div class="row">
+	  <div class="eight columns offset-by-two">
+		<ul class="">
+		  
+		  <li class="u-pull-left"> <a href="/" class="brand" style="font-weight:bold;font-size:normal"> Clogure </a></li>
+		  <li class="u-pull-right cate"> <a href="http://localhost:1313/about/" class=""> About </a></li>
+		  
+		</ul>
+	  </div>
+	</div>
+  </div>
+</nav>
+
+
+<div class="container post-wrapper">
+  <div class="row">
+	<div class="eight columns offset-by-two">
+	  <div id="post-title">
+		<p class="footnote">
+		  
+		  <time class="">2014-01-25</time>
+		  
+		  
+		  
+
+		  
+
+		  
+
+		</p>
+		<h5>Emacser&#39;s guide: set up your osx like a BOSS</h5>
+	  </div>
+
+	  <div class="post">
+		
+
+<p><em>This is a &ldquo;LTS&rdquo; list of suggested tools(developer-leaning) runing on OS X based on my personal experiences, you can consider it as a starter tool kit for new machines and systems.</em></p>
+
+<h3 id="basic-principles:3da1bfbacbf7f0b86720749b0a0f6052">Basic Principles</h3>
+
+<ol>
+<li><em>Less is more.</em> Consider the OS X&rsquo;s builtin functionalities at first!</li>
+<li>A good package manager saves your ass.</li>
+<li>CLI is better than GUI from time to time.</li>
+</ol>
+
+<h3 id="starting-off:3da1bfbacbf7f0b86720749b0a0f6052">Starting Off</h3>
+
+<ol>
+<li>Install <strong>Xcode Command Line Tools</strong>: <code>xcode-select --install</code>.
+Acutally install the Xcode GUI program is unnecessary if you are not a iOS or OSX developer since all other dev tools depend on Command Line Tools, not the Xcode GUI IDE.</li>
+<li>Install <strong>brew</strong>: <a href="http://brew.sh">brew.sh</a> (the most popular OS X packages manager). Then <code>brew doctor</code>.</li>
+</ol>
+
+<h3 id="emacs:3da1bfbacbf7f0b86720749b0a0f6052">Emacs</h3>
+
+<p>Install <em>pure Emacs</em> from <a href="http://emacsformacosx.com">emacsformacosx.com</a>. This is so far the best version running on osx comparing with others(e.g. Aquamacs). The goodies of using pure Emacs is let you take full control of everything and have the best compatibility.</p>
+
+<p>Here is my <a href="https://gist.github.com/gizak/272ab7a66f74e0315eea">dotEmacs</a>!</p>
+
+<p><strong>Package for Packages</strong></p>
+
+<p><em>First of all, add melpa repo to Emacs</em>:</p>
+
+<pre><code>(require 'package)
+(add-to-list 'package-archives
+  '(&quot;melpa&quot; . &quot;http://melpa.milkbox.net/packages/&quot;) t)
+(package-initialize)
+(add-to-list 'load-path &quot;~/.emacs.d/site-lisp&quot;)    ; This may not be appeared if you have already added.
+</code></pre>
+
+<p><strong>Basic Packages</strong></p>
+
+<ol>
+<li>auto-complete</li>
+<li>base16-theme</li>
+<li>ecb</li>
+<li>flycheck</li>
+<li>magit</li>
+<li>rainbow-delimiters</li>
+<li>yasnippet</li>
+<li>ido</li>
+<li>smex</li>
+<li>volatile-highlight-mode</li>
+<li>markdown-mode</li>
+<li>yaml-mode</li>
+<li>color-theme</li>
+</ol>
+
+<p><strong>Javascript Packages</strong></p>
+
+<ol>
+<li>js3-mode</li>
+<li>json-mode</li>
+</ol>
+
+<p><strong>Go Packages</strong></p>
+
+<ol>
+<li>go-autocomplete</li>
+<li>go-mode</li>
+<li>go-lint</li>
+<li>go-eldoc</li>
+<li>go-direx (optinal)</li>
+<li>go-errcheck(optional)</li>
+</ol>
+
+<p>Needed Go packages:</p>
+
+<ol>
+<li><a href="https://github.com/nsf/gocode">gocode</a> (go-autocomplete, go-eldoc)</li>
+<li><a href="https://github.com/golang/lint">lint</a> (go-lint)</li>
+<li><a href="https://github.com/kisielk/errcheck">errcheck</a> (go-errcheck)</li>
+<li><a href="https://github.com/jstemmer/gotags">gotags</a>  (go-direx)</li>
+</ol>
+
+<p><strong>Clojure and ClojureScript</strong></p>
+
+<ol>
+<li>clojure-mode</li>
+<li>cider</li>
+<li>pretty-symbols</li>
+<li>ac-nrepl</li>
+<li>paredit</li>
+</ol>
+
+<p><strong>Others</strong></p>
+
+<ol>
+<li>ess (R programming)</li>
+<li>auctex (writing Tex)</li>
+<li>linum-relative (kinda cool)</li>
+<li>2048-game</li>
+<li>git-gutter, git-gutter-fringe, fringe-helper</li>
+</ol>
+
+<p><strong>Dict and Spelling Checker</strong></p>
+
+<p>To work with flyspell-mode in Emacs I recommend using <em>hunspell</em> (which is the default checker in OS X) to replace default ispell:</p>
+
+<pre><code>;; now hunspell replaced ispell
+(setq ispell-program-name &quot;hunspell&quot;
+      ispell-local-dictionary &quot;en_CA&quot;
+      ispell-skip-html t
+      ispell-local-dictionary-alist
+      '((&quot;en_CA&quot; &quot;\[\[:alpha:\]\]&quot; &quot;[^[:alpha:]]&quot; &quot;[']&quot; nil (&quot;-d&quot; &quot;en_CA&quot;) nil utf-8)))
+(setq ispell-dictionary &quot;en_CA&quot;)
+
+(add-hook 'markdown-mode-hook 'flyspell-mode) ;; for markdown-mode
+(add-hook 'org-mode-hook 'flyspell-mode) ;; for org-mode
+</code></pre>
+
+<p>Download hunspell at <a href="http://hunspell.sourceforge.net">sourceforge</a></p>
+
+<p>Then download en dictionaries to /Library/Spelling :</p>
+
+<p>US:
+<a href="http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.aff">en_US.aff</a>
+<a href="http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.dic">en_US.dic</a></p>
+
+<p>CA:
+<a href="http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_CA.aff">en_CA.aff</a>
+<a href="http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_CA.dic">en_CA.dic</a></p>
+
+<h3 id="other-dev-tools:3da1bfbacbf7f0b86720749b0a0f6052">Other Dev Tools</h3>
+
+<p><a href="http://kapeli.com/dash">Dash.app</a>: Dash gives your Mac instant offline access to 150+ API documentation sets.</p>
+
+<p><a href="https://www.google.com/chrome/?">Google Chrome</a>: Sometimes Safari is not enough.</p>
+
+<p><a href="https://mac.github.com">Github for Mac</a>: Easiest way to use Github on Mac.</p>
+
+<p><a href="http://lighttable.com">Light Table</a>: A promising ClojureScript powered IDE, especially for Clojure, ClojureScript and Javascript developing.</p>
+
+<p><a href="https://slack.com">Slack</a>: Team communicating, a better way than emails.</p>
+
+<p><a href="http://www.visual-paradigm.com/download/community.jsp">Visual Paradiam CE</a>: Literally I do not like UML at all&hellip;</p>
+
+<h3 id="multimedia-and-others:3da1bfbacbf7f0b86720749b0a0f6052">Multimedia and Others</h3>
+
+<p><a href="http://mplayerx.org">MPlayerX</a>: The recent versions are off Apple App Store, so do not install it from App Store.</p>
+
+<p><a href="https://tug.org/mactex/">MacTex</a>: tex live on Mac.</p>
+
+<p><a href="https://www.apple.com/ca/mac/pages/">Pages.app</a>: Only recommend for quick dirty writing!</p>
+
+<p>Mail.app: Every email app sucks, so let us just use the built-in app.</p>
+
+<p><a href="http://www.utorrent.com/?us">uTorrent</a>: The popular torrent client.</p>
+
+<p>Dictionary.app: I don&rsquo;t see any needs to install a third-party dictionary. If it&rsquo;s not enough, go online!</p>
+
+<h3 id="conclusion:3da1bfbacbf7f0b86720749b0a0f6052">Conclusion</h3>
+
+<p>Do not turn you Mac into a mess! Install things only when you need it! <a href="mailto:gizak@icloud.com">@Gizak</a></p>
+
+	  </div>
+	</div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="container">
+	<div class="row">
+	  <div class="ten columns offset-by-two">
+		<p class="footnote">Copyright: All rights reserved by <a href="mailto:gizak@icloud.com">@Zack Guo</a>.
+		  
+		  Find me at
+
+		  
+		  <a href="https://github.com/gizak" >GitHub</a>
+		  
+
+		  
+
+		  
+
+		  
+
+		  
+		</p>
+	  </div>
+	</div>
+  </div>
+</div>
+
+
+<script src="http://localhost:1313/js/jquery.min.js" type="text/javascript"></script>
+<script src="http://localhost:1313/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+  $("#menu").click(function(){
+    $(".brand").text("HOME");
+    $(".navbar ul li").removeClass("cate");
+    $(".navbar").toggle();
+  });
+  $(window).resize(function(){
+    if(window.innerWidth > 768) {
+      $(".navbar").removeAttr("style");
+    }
+  });
+</script>
+</body>
+</html>
+

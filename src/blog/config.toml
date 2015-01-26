@@ -1,0 +1,8 @@
+baseurl = "/blog"
+languageCode = "en-us"
+title = "Clogure"
+
+[author]
+    name = "Zack Guo"
+    github = "gizak"
+    email = "gizak@icloud.com"
