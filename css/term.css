@@ -3,6 +3,7 @@
 #term-box {
 	margin-top:80px;
 	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	background-color:transparent;
 }
 
 #term-box p {
