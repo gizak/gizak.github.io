@@ -89,7 +89,7 @@
                 (cmd/output-raw "<br>")
                 (cmd/output "This is supposed to be an index page. It appears as a terminal simulator because the author, gizak, has absolutely no idea how to present a landing page without boredom.")
                 (cmd/output-raw "<br>")
-                (cmd/output "For more information, enter command `help` to list all avaliable commands, type `about` to know a little bit about me and hit `source` if you are interested in this page.")
+                (cmd/output "For more information, enter command `help` to list all available commands, type `about` to know a little bit about me and hit `source` if you are interested in this page.")
                 (cmd/output-raw "<br>")))
 
 
