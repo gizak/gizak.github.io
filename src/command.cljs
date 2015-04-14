@@ -1,4 +1,4 @@
-(ns index.command
+(ns gio.command
   (:require [clojure.string :as string]
             [cljs.tools.cli :refer [parse-opts summarize]]
             [om.core :as om]))

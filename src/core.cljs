@@ -1,12 +1,12 @@
 ;; Pure ClojureScript full-stack terminal evaluator.
-(ns index.core
+(ns gio.core
   (:require [om.core :as om]
             [om-tools.dom :as dom :include-macros true]
             [om-tools.core :refer-macros [defcomponent]]
             [clojure.string :as string]
             [goog.string :as gstring]
             [goog.string.format :as gformat]
-            [index.command :as cmd]))
+            [gio.command :as cmd]))
 
 
 (def app-state (atom {:headline "PLACEHODLER"
@@ -23,32 +23,11 @@
 (defn open-link [url]
   (.open js/window url "_blank"))
 
-;; (defn command [cmd info func]
-;;   (swap! app-state assoc-in [:commands cmd] {:handler func :name (name cmd) :info info}))
-
 (defn focus []
   (.focus (.getElementById js/document "input-box")))
 
-;; (defn call [cmd & args]
-;;   ((get-in @app-state [:commands cmd :handler]) args))
-
-
-;; (defn add-history* [el]
-;;   (swap! app-state #(update-in % [:history] conj el)))
-
-;; (defn echo [text]
-;;   (swap! app-state #(update-in % [:history] conj (dom/p {:class "history-output"} text))))
-
-
-;; (defn clear []
-;;   (swap! app-state assoc :history []))
-
-
-;; (defn no-match-cmd [cmd]
-;;   (cmd/output (str "sh: command not found: " cmd)))
 
 (cmd/bind-data app-state)
-
 
 (cmd/register :about "a bit about me"
               (fn [opts]
@@ -59,10 +38,6 @@
               (fn [opts]
                 (open-link "https://github.com/gizak")))
 
-
-;; (cmd/register :exit "quit (close current window/tab)"
-;;               (fn [opts]
-;;                 (.close js/window)))
 
 (cmd/register :source "view this page's source code"
               (fn [opts]
@@ -109,21 +84,6 @@
             -style
             -backgroundColor) clr))
 
-
-;; (defn call-cmd [s]
-;;   (let [raw (string/trim s)
-;;         args (split-args raw)
-;;         cmd (first args)
-;;         cmdk (keyword cmd)]
-;;     (if cmd
-;;       (if (contains? (:commands @app-state) cmdk)
-;;         (apply call cmdk (rest args))
-;;         (no-match-cmd cmd)))))
-
-
-;; (defn add-history [line]
-;;   (swap! app-state
-;;          #(update-in % [:history] conj (dom/p {:class "history-input"} (str (:prompt @app-state) line)))))
 
 
 
