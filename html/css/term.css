@@ -1,0 +1,36 @@
+/****/
+
+#term-box {
+	margin-top:80px;
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	background-color:transparent;
+}
+
+#term-box p {
+	margin:0;
+	word-wrap: break-word;
+}
+
+.history-input {
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+#input-table {
+	display:table;
+	width:100%;
+}
+
+#input-prompt {
+	display:table-cell;
+	width:1.7em;
+}
+
+#input-box {
+	display:table-cell;
+	width:100%;
+	outline:none;
+	box-shadow:none;
+	padding-left:0.55em;
+	border:0;
+}

@@ -4,4 +4,4 @@ test/cljs
 .repl
 .nrepl-port
 out
-target
+build

@@ -31,7 +31,7 @@
 
 (cmd/register :about "a bit about me"
               (fn [opts]
-                (cmd/output "Uhmm... I don't what to write anything at this moment")))
+                (cmd/output "Let's start with obvious, I am not good at writing...")))
 
 
 (cmd/register :github "goto my github page"
@@ -41,7 +41,7 @@
 
 (cmd/register :source "view this page's source code"
               (fn [opts]
-                (open-link "https://github.com/gizak/gizak.github.io/blob/source/src/index/core.cljs")))
+                (open-link "https://github.com/gizak/gizak.github.io/blob/source/src/gio/core.cljs")))
 
 (cmd/register :clear "clear all history"
               (fn [opts] (cmd/clear) true))
