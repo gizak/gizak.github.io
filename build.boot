@@ -1,5 +1,5 @@
 (set-env!
-  :source-paths    #{"src" "inc"}
+  :source-paths    #{"src" "html/js"}
   :resource-paths  #{"html"}
   :target-path "build"
   :dependencies '[[adzerk/boot-cljs "0.0-2814-4"]
