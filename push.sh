@@ -14,7 +14,7 @@ rm -rf !(.git)
 cd -
 
 # fill temp dir and push
-cp -R build/* $TEMP/
+cp -R resources/public/* $TEMP/
 cd $TEMP
 git add --all
 git commit -m "$1"

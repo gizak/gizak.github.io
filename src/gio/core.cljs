@@ -1,19 +1,17 @@
 ;; Pure ClojureScript full-stack terminal evaluator.
 (ns gio.core
-  (:require [om.core :as om]
-            [om-tools.dom :as dom :include-macros true]
-            [om-tools.core :refer-macros [defcomponent]]
+  (:require [reagent.core :as r]
             [clojure.string :as string]
             [goog.string :as gstring]
             [goog.string.format :as gformat]
             [gio.command :as cmd]))
 
 
-(def app-state (atom {:headline "PLACEHODLER"
-                      :commands {}
-                      :log {}
-                      :prompt "λ > "
-                      :history []}))
+(defonce app-state (r/atom {:headline "PLACEHODLER"
+                            :commands {}
+                            :log {}
+                            :prompt "λ > "
+                            :history []}))
 
 
 (defn log [o]
@@ -86,50 +84,35 @@
 
 
 
-
-(defcomponent viewport [data owner]
-  (init-state [_]
-              {:inputing? true
-               :line ""})
-  (will-mount [_])
-
-  (did-mount [_]
-             (cmd/call "copyright")
-             (om/refresh! owner)
-             (focus))
-  (render-state [_ {:keys [inputing? line]}]
-                (dom/div {:id "term-box"}
-                         (for [h (cmd/history)]
-                           (condp = (:type h)
-                             :output (dom/p {:class "history-output"}
-                                            (:content h))
-                             :output-raw (dom/p {:class "history-output"
-                                                 :dangerously-set-innerHTML
-                                                 {:__html (:content h)}})
-                             :input (dom/p {:class "history-input"}
-                                           (str (:prompt data) (:content h)))))
-                         (if inputing?
-                           (dom/p {:id "input-table"}
-                                  (dom/span {:id "input-prompt"}
-                                            (:prompt data))
-                                  (dom/input {:id "input-box"
-                                              :on-change (fn [e]
-                                                           (om/set-state!
-                                                            owner
-                                                            :line
-                                                            (.. e -target -value)))
-                                              :value line
-                                              :auto-focus true
-                                              :on-key-press (fn [e]
-                                                              (if (= "Enter" (.-key e))
-                                                                (do
-                                                                  (om/set-state! owner :inputing? false)
-                                                                  (cmd/record-input line)
-                                                                  (cmd/call (.. e -target -value))
-                                                                  (om/set-state! owner :line "")
-                                                                  (om/set-state! owner :inputing? true)
-                                                                  (focus))))}))))))
+(defn viewport []
+  (let [line (r/atom "")
+        inputing? (r/atom true)]
+    (fn []
+      [:div#term-box
+            (for [h (cmd/history)]
+              (condp = (:type h)
+                :output      [:p.history-output (:content h)]
+                :output-raw  [:p.history-output {:dangerously-set-innerHTML {:__html (:content h)}}]
+                :input       [:p.history-output (str (:prompt @app-state) (:content h))]))
+            (if @inputing?
+              [:p#input-table
+               [:span#input-prompt (:prompt @app-state)]
+               [:input#input-box {:on-change #(reset! line (.. % -target -value))
+                                  :value @line
+                                  :auto-focus true
+                                  :on-key-press (fn [e]
+                                                  (if (= "Enter" (.-key e))
+                                                    (do
+                                                      (reset! inputing? false)
+                                                      (cmd/record-input @line)
+                                                      (cmd/call (-> e .-target .-value))
+                                                      (reset! line "")
+                                                      (reset! inputing? true)
+                                                      (focus))))}]])])))
 
 
-(om/root viewport app-state
- {:target (. js/document (getElementById "app"))})
+(defn ^:export run []
+  (r/render [viewport]
+            (js/document.getElementById "app"))
+  (cmd/call "copyright")
+  (focus))

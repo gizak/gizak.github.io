@@ -1,7 +1,7 @@
 (ns gio.command
   (:require [clojure.string :as string]
             [cljs.tools.cli :refer [parse-opts summarize]]
-            [om.core :as om]))
+            [reagent.core :as r]))
 
 (def re-single-q "(@djnqonfa0djq0923u103it59u4978t2i45jtor8uvna38ufq935u9tgoy24r7oqdh108rhirb)")
 (def re-double-q "(@284ijgtpw99jt2pu4ght284ruqprgw89tjwp9qh94fhwufh89qufhqfhd98hfu5q0ewfu24h8)")
@@ -94,7 +94,7 @@
 
 
 
-(def data (atom nil))
+(defonce data (r/atom nil))
 
 (defn bind-data [d]
   (reset! data d))
@@ -132,12 +132,13 @@
 
 
 (defn call [cmd*]
-  (let [args (split-args cmd*)
-        cmd (keyword (first args))]
-    (if (contains? (:commands @@data) cmd)
-      ((get-in @@data [:commands cmd :handler])
-       (parse-opts (rest args) (get-in @@data [:commands cmd :otps])))
-      (output (str "sh: command not found: " (name cmd))))))
+  (if (not (empty? cmd*))
+    (let [args (split-args cmd*)
+          cmd (keyword (first args))]
+      (if (contains? (:commands @@data) cmd)
+        ((get-in @@data [:commands cmd :handler])
+         (parse-opts (rest args) (get-in @@data [:commands cmd :otps])))
+        (output (str "sh: command not found: " (name cmd)))))))
 
 (defn history []
   (:history @@data))
